@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Producto</title>
+    <link rel="icon" href="\images\nuevo-producto.png" type="image/png">
+    <link rel="stylesheet" href="\css\styles.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Navegación principal">
+            <a href="#">Inicio</a>
+            <a href="#">Producto</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <main>
+            <section id="hero">
+                <h1>Zapatillas Classics | Club C 85 | Hombre</h1>
+                <p>Zapatillas inspiradas en el tenis de los archivos de Reebok</p>
+            </section>
+            <img src="\images\producto.jpg" alt="Imagen del producto">
+            <section aria-labelledby="caracteristicas">
+                <h2>Características</h2>
+                <ul>
+                <li>Peso: aprox. 360 g. (talla 9 US Hombre)</li>
+                <li>Materiales: Superior: 97% Cuero Vacuno - Recubierto De Pu, 3% Poliéster Tex | Suela: 100% Caucho
+</li>
+                <li>Perfil de corte bajo
+</li>
+                </ul>
+            </section>
+            <section aria-labelledby="faq">
+                <h2>Preguntas Frecuentes</h2>
+                <ul>
+                    <li>Cuanto cuesta</li>
+                    <p>20 dolares</p>
+                    <li>Cuanto dura</li>
+                    <p>2 años</p>
+                </ul>
+
+            </section>
+    </main>
+    <footer>
+    <p>Contacto: <a href="mailto:contacto@miempresa.com">contacto@miempresa.com</a></p>
+    <div class="social-media">
+        <img src="\images\icono-fb.png" alt="Logo facebook" width="50px">
+        <img src="\images\instagram.png" alt="Logo facebook" width="50px">
+    </div>
+    <button id="toggle-theme">🌙 Cambiar tema</button>
+    <script>
+                const btn = document.getElementById("toggle-theme");
+        btn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        });
+    </script>
+    </footer>
+</body>
+</html>
