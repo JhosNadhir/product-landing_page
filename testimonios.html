@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+            border: 1px   red;
+            text-decoration: none;
+        }
+            
+        header  {
+            grid-area: header;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: #f0f0f0;
+            z-index: 3;
+            border-bottom: 1px solid #000;
+
+
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 1px  #000;
+
+        }
+
+            .logo {
+            font-family: 'Bungee', cursive;
+            font-size: 3rem;
+            color: #026b42;
+            margin-right: auto;
+            margin-left: 20px;
+            }
+            a {
+            text-decoration: none;
+            color: #014229;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            }
+
+        body {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 2.5fr 4fr;
+            gap: 1rem;
+        }
+        main {
+            grid-area: main;
+            padding: 1rem;
+            display: grid;
+            background-color:#f0f0f1;
+        }
+            main section {
+            display: grid;
+            grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
+            gap: 1.5rem;
+            }
+            
+                main section article{
+                    background-color: white;
+                    padding: 1rem;
+                }
+        aside {
+            grid-area: sidebar;
+            padding-top: 1rem;
+            background-color: #f0f0f1;
+            border-right: 1px solid #000000;
+            }   
+        footer {
+            grid-area: footer;
+            background-color: #f0f0f1;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #000000;
+        }
+        @media (max-width: 768px) {
+            body {
+                grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "sidebar"
+                "footer";
+                grid-template-columns: 1fr;
+            }
+            }
+    </style>
+
+</head>
+    <body>
+        <header>
+                    <nav>
+            <h1 class="logo">BOYS</h1>
+                <a href="#">Inicio</a>
+                <a href="#">Producto</a>
+                <a href="#">Contacto</a>
+        </nav>
+        </header>
+
+        <aside>
+            <h2>Filtros</h2>
+            <img src="images\barra-lateral-filtros-woocommerce.png" alt="Icono filtros" width="100%">
+        </aside>
+        <main>
+            <section>
+                <h1>Testimonios de clientes</h1>
+                <article>
+                    <h2>Juan Pérez</h2>
+                    <p>Estas zapatillas son increíblemente cómodas y duraderas. Las uso para correr todos los días y nunca me han decepcionado.</p>
+                </article>
+                <article>
+                    <h2>María Gómez</h2>
+                    <p>Me encanta el diseño clásico de estas zapatillas. Son perfectas para cualquier ocasión, ya sea para salir a caminar o para un look casual.</p>
+                </article>
+                <article>
+                    <h2>Carlos Rodríguez</h2>
+                    <p>La calidad del material es excepcional. He tenido mis zapatillas por más de un año y todavía se ven como nuevas.</p>
+                </article>
+                <article>
+                    <h2>Ana Martínez</h2>
+                    <p>Estas zapatillas ofrecen un gran soporte para mis pies. He notado una gran diferencia en mi comodidad al usarlas durante largas caminatas.</p>
+                </article>
+            </section>
+
+
+        </main>
+        <footer>
+                    <p>Contacto: <a href="mailto:contacto@miempresa.com">contacto@miempresa.com</a></p>
+        <div class="social-media">
+            <img src="images\icono-fb.png" alt="Logo facebook" width="50px">
+            <img src="images\instagram.png" alt="Logo facebook" width="50px">
+        </div>
+
+        
+        <a href="#">Terminos y Condiciones</a>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+            border: 1px   red;
+            text-decoration: none;
+        }
+        body {
+        display: grid;
+        grid-template-areas: 
+            "header header"
+            "sidebar main"
+            "footer footer";
+        grid-template-columns: 1fr 3fr;
+        gap: 1rem;
+        }
+        header {
+            grid-area: header;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: #f0f0f0;
+            z-index: 3;
+            border-bottom: 1px solid #000;
+        }
+                header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 1px  #000;
+
+        }
+
+            .logo {
+            font-family: 'Bungee', cursive;
+            font-size: 3rem;
+            color: #026b42;
+            margin-right: auto;
+            margin-left: 20px;
+            }
+            a {
+            text-decoration: none;
+            color: #014229;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            }
+        main {
+            grid-area: main;    
+            padding: 1rem;
+            display: grid;
+            gap: 2rem;
+            background-color:#f0f0f1;
+        }
+        aside {
+            grid-area: sidebar;
+            padding-top: 1rem;
+            background-color:#f0f0f1;
+            border-right: 1px solid #000000;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 1.1rem;
+
+
+            }
+        footer {
+            grid-area: footer;
+            background-color: #f0f0f1;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #000000;
+        }
+            section {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            h2 {
+                margin-bottom: 1rem;
+                color: #026b42;
+            }
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+            input, select {
+                width: 100%;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button {
+                background-color: #026b42;
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 1rem;
+            }
+            button:hover {
+                background-color: #014229;
+            }
+            
+
+        @media (max-width: 768px) {
+            body {
+                grid-template-areas:
+                "header"
+                "main"
+                "sidebar"
+                "footer";
+                grid-template-columns: 1fr;
+            }
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav aria-label="Navegación principal">
+            <h1 class="logo">BOYS</h1>
+            <a href="#">Inicio</a>
+            <a href="#">Producto</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <aside>
+        <h1>Pasos para realizar la compra</h1>
+        <ol>
+            <li>Selecciona el producto que deseas comprar.</li>
+            <li>Haz clic en el botón "Agregar al carrito".</li>
+            <li>Revisa tu carrito y procede al pago.</li>
+            <li>Ingresa tus datos de envío y pago.</li>
+            <li>Confirma tu compra y espera la confirmación por correo.</li>
+        </ol>
+        <h1>Opciones de envio</h1>
+        <ul>
+            <li>Envío estándar: 3-5 días hábiles.</li>
+            <li>Envío exprés: 1-2 días hábiles.</li>
+            <li>Recogida en tienda: Disponible en 24 horas.</li>
+        </ul>
+        <h1>Metodos de pago</h1>
+        <ul>
+            <li>Tarjeta de crédito/débito (Visa, MasterCard, American Express)</li>
+            <li>PayPal</li>
+            <li>Transferencia bancaria</li>
+            <li>Pago contra entrega (disponible en ciertas áreas)</li>
+    </aside>
+    <main>
+        <section class="Resumen de producto" >
+            <h2>Resumen del Producto</h2>
+            <p>Nuestro producto estrella es un calzado deportivo diseñado para ofrecer comodidad y estilo. Con materiales de alta calidad y un diseño ergonómico, este calzado es perfecto para actividades diarias y deportivas.</p>
+            <ul>
+                <li>Material: Malla transpirable y suela de goma antideslizante</li>
+                <li>Colores disponibles
+            
+
+        </section>
+        <section class="Formulario de compra" >
+            <h2>Formulario de Compra</h2>
+            <form action="#" method="post">
+                <label for="nombre">Nombre Completo:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                
+                <label for="direccion">Dirección de Envío:</label><br>
+                <input type="text" id="direccion" name="direccion" required><br><br>
+                
+                <label for="metodo-envio">Método de Envío:</label><br>
+                <select id="metodo-envio" name="metodo-envio" required>
+                    <option value="estandar">Envío Estándar (3-5 días)</option>
+                    <option value="expres">Envío Exprés (1-2 días)</option>
+                    <option value="tienda">Recogida en Tienda</option>
+                </select><br><br>
+                
+                <label for="metodo-pago">Método de Pago:</label><br>
+                <select id="metodo-pago" name="metodo-pago" required>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                    <option value="contra-entrega">Pago contra Entrega</option>
+                </select><br><br>
+                
+                <button type="submit">Realizar Compra</button>
+            </form>
+
+        </section>
+    </main>
+    <footer>...</footer>
+</body>
+</html>

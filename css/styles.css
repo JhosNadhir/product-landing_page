@@ -20,7 +20,7 @@ header {
   top: 0;
   width: 100%;
   background-color: #f0f0f0;
-  z-index: 3;
+  z-index: 4;
   border-bottom: 1px solid #000;
   box-shadow: #000000 0px 8px 25px;
 }
@@ -64,7 +64,7 @@ main {
 
   max-width: 100%;
   max-height: 50%;
-
+  position: relative;
 }
 #hero {
   display: flex;
@@ -93,6 +93,30 @@ main {
     top: 65%;
     right: 0px;
     font-size:1.5vw; /*1.2rem;*/
+  }
+  .boton_whatsapp{
+    position: fixed;
+    width: 8vw;
+    height: 8vw;
+    top: 78%;
+    right: 90%;
+    z-index: 2;
+    filter: drop-shadow( #000000 3px 5px 10px);
+  }
+  .comprar-btn{
+    position: absolute;
+    z-index: 3;
+    top: 77%;
+    right: 0px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #026b42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: #000000 0px 0px 20px;
+    transition: background-color 0.3s ease;
   }
 main article {
   width: 100%;
@@ -135,6 +159,17 @@ main article h2{
   flex-direction: column;
   gap : 15px;
   text-align: left;
+}
+.enlaces-relacionados{
+  margin-top: 70px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f1;
+  border: 1px solid #000;
+  box-shadow: #000000 0px 2px 5px;
+
 }
 
 .galeria {
@@ -184,6 +219,10 @@ button:hover {
   color: white;/* color más oscuro */
   transition: background-color 0.5s ease;
   
+}
+.boton_whatsapp:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 .foto:hover{
   transform: scale(1.1);
